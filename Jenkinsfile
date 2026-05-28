@@ -1,13 +1,11 @@
 pipeline {
     agent any
 
-    // Define tools globally based on your project prerequisites
     tools {
         maven 'Maven_3.9'
-        jdk 'Java_11'
+        jdk 'JDK21' // Fixed: Updated to match your Jenkins system environment configuration
     }
 
-    // Pipeline behavior constraints
     options {
         timeout(time: 15, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '10'))
@@ -26,7 +24,6 @@ pipeline {
         stage('2. Artifact Compilation') {
             steps {
                 echo 'Compiling Java classes and verifying dependencies...'
-                // Verifies compile-time safety before spinning up browser instances
                 sh 'mvn clean compile -DskipTests'
             }
         }
@@ -35,8 +32,6 @@ pipeline {
             steps {
                 echo 'Executing Cucumber UI, API, and Hybrid E2E Test Matrix in Parallel...'
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    // Executes headlessly on Jenkins agents. TestNG XML controls threads.
-                    // AnnotationTransformer dynamically manages reruns for flaky anomalies.
                     sh 'mvn test -Dheadless=true'
                 }
             }
@@ -46,7 +41,6 @@ pipeline {
             steps {
                 echo 'Launching Headless JMeter Performance Engine for 100 Concurrent Users...'
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    // Navigates to performance folder, runs JMeter in non-GUI mode, and outputs an HTML report
                     dir('performance-testing') {
                         sh 'jmeter -n -t Notes_Load_Test.jmx -l results.jtl -e -o html-report'
                     }
@@ -62,21 +56,20 @@ pipeline {
         }
     }
 
-    // Post-Execution reporting pipeline block
     post {
         always {
             echo 'Archiving screenshots, processing logs, and publishing reporting matrices...'
             
-            // 1. Publish interactive Allure Report dashboard inside Jenkins UI
-            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+            // 1. Fixed Syntax: Standard syntax mapping for Allure results engine
+            allure results: [[path: 'target/allure-results']]
             
-            // 2. Publish native Cucumber plugin summary tracking charts
-            cucumber buildStatusUrl: '', fileIncludePattern: '**/cucumber-report.json', jsonReportDirectory: 'target'
+            // 2. Fixed Syntax: Cleaned Cucumber report tracking block
+            cucumber fileIncludePattern: '**/cucumber-report.json', jsonReportDirectory: 'target'
             
-            // 3. Backup and archive failed browser screenshots and framework runtime log files
+            // 3. Backup and archive files
             archiveArtifacts artifacts: 'target/screenshots/*.png, logs/*.log, performance-testing/results.jtl', allowEmptyArchive: true
             
-            // 4. Publish standalone JMeter HTML Dashboard directly to the build menu sidebar
+            // 4. Publish standalone JMeter HTML Dashboard
             publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
