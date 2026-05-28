@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Capstone Notes Automation Suite"
+       parallel="methods"
+       thread-count="3"
+       verbose="2">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="com.capstone.utils.AnnotationTransformer"/>
+    </listeners>
+
+    <!-- Chrome Test Run (Primary) -->
+    <test name="Chrome - All Scenarios" preserve-order="false">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.capstone.runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <!-- Firefox Test Run (Uncomment for cross-browser) -->
+    <!--
+    <test name="Firefox - All Scenarios" preserve-order="false">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.capstone.runners.TestRunner"/>
+        </classes>
+    </test>
+    -->
+
+    <!-- Edge Test Run (Uncomment for cross-browser) -->
+    <!--
+    <test name="Edge - All Scenarios" preserve-order="false">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.capstone.runners.TestRunner"/>
+        </classes>
+    </test>
+    -->
+
+</suite>

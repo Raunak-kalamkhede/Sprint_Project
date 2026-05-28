@@ -1,0 +1,881 @@
+2026-05-27 14:45:08.813 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-01 - Login API returns valid JWT auth token ======
+2026-05-27 14:45:08.819 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @smoke, @TS-API-01]
+2026-05-27 14:45:08.822 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:08.830 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.config.ConfigReader - Configuration loaded from: config/config.properties
+2026-05-27 14:45:08.831 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:08.832 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: API login with valid credentials
+2026-05-27 14:45:08.832 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:13.008 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 1785ms
+2026-05-27 14:45:13.009 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 1785ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:13.875 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:13.876 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Auth token stored successfully
+2026-05-27 14:45:13.912 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:13.915 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 4 second(s)
+2026-05-27 14:45:13.915 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 1785ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:13.919 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 1785ms < 4000ms
+2026-05-27 14:45:13.925 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:13.925 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 1785ms | PASS
+2026-05-27 14:45:13.925 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 1785ms | PASS
+2026-05-27 14:45:13.925 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:13.927 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-01 - Login API returns valid JWT auth token | Status: PASSED ======
+2026-05-27 14:45:14.064 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-03 - GET notes returns list for authenticated user ======
+2026-05-27 14:45:14.064 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @smoke, @TS-API-03]
+2026-05-27 14:45:14.064 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:14.065 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:14.066 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:14.066 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:14.626 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 528ms
+2026-05-27 14:45:14.653 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:14.653 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 528ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:14.654 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:14.656 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with the auth token
+2026-05-27 14:45:14.656 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:15.147 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 441ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:15.147 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - GET /notes response: 200 | time: 441ms
+2026-05-27 14:45:15.150 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:15.155 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should contain a list of notes
+2026-05-27 14:45:15.173 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Notes list returned with 4 items
+2026-05-27 14:45:15.176 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 4 second(s)
+2026-05-27 14:45:15.177 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 441ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:15.177 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 441ms < 4000ms
+2026-05-27 14:45:15.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:15.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 528ms | PASS
+2026-05-27 14:45:15.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 441ms | PASS
+2026-05-27 14:45:15.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 441ms | PASS
+2026-05-27 14:45:15.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:15.181 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-03 - GET notes returns list for authenticated user | Status: PASSED ======
+2026-05-27 14:45:15.200 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-02 - Create note via API and verify it appears in GET notes ======
+2026-05-27 14:45:15.201 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @TS-API-02]
+2026-05-27 14:45:15.201 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:15.202 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:15.202 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:15.202 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:15.853 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 604ms
+2026-05-27 14:45:15.868 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:15.868 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 604ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:15.868 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:15.870 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I create a note via API | [Work] API Created Note
+2026-05-27 14:45:15.870 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API POST /notes | category: Work | title: API Created Note
+2026-05-27 14:45:16.468 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /notes | 580ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:16.483 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Note created via API. ID: 6a16b5f753916b0295cdd037
+2026-05-27 14:45:16.485 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:16.487 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 4 second(s)
+2026-05-27 14:45:16.487 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 580ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:16.488 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 580ms < 4000ms
+2026-05-27 14:45:16.489 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with the auth token
+2026-05-27 14:45:16.490 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:18.969 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 2461ms (threshold: 2000ms) | ❌ FAIL
+2026-05-27 14:45:18.969 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - GET /notes response: 200 | time: 2461ms
+2026-05-27 14:45:18.970 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response should contain the created note
+2026-05-27 14:45:18.970 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:19.548 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes (verify) | 552ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:19.635 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Confirmed: note 'API Created Note' exists in API response
+2026-05-27 14:45:19.637 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 4 second(s)
+2026-05-27 14:45:19.637 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 2461ms (threshold: 2000ms) | ❌ FAIL
+2026-05-27 14:45:19.637 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 2461ms < 4000ms
+2026-05-27 14:45:19.638 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I delete the previously created API note
+2026-05-27 14:45:19.639 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b5f753916b0295cdd037
+2026-05-27 14:45:20.160 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | DELETE /notes/6a16b5f753916b0295cdd037 | 490ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:20.165 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:20.169 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:20.169 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 604ms | PASS
+2026-05-27 14:45:20.169 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /notes | 580ms | PASS
+2026-05-27 14:45:20.169 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 580ms | PASS
+2026-05-27 14:45:20.170 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 2461ms | FAIL
+2026-05-27 14:45:20.170 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes (verify) | 552ms | PASS
+2026-05-27 14:45:20.170 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 2461ms | FAIL
+2026-05-27 14:45:20.172 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | DELETE /notes/6a16b5f753916b0295cdd037 | 490ms | PASS
+2026-05-27 14:45:20.172 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:20.172 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-02 - Create note via API and verify it appears in GET notes | Status: PASSED ======
+2026-05-27 14:45:20.228 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-05 - Delete a note via API and verify removal ======
+2026-05-27 14:45:20.228 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @TS-API-05]
+2026-05-27 14:45:20.229 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:20.229 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:20.229 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:20.230 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:20.764 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 514ms
+2026-05-27 14:45:20.779 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:20.779 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 514ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:20.779 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:20.781 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I create a note via API | [Personal] Note For Deletion Test
+2026-05-27 14:45:20.781 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API POST /notes | category: Personal | title: Note For Deletion Test
+2026-05-27 14:45:21.277 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /notes | 477ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:21.291 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Note created via API. ID: 6a16b5fc53916b0295cdd044
+2026-05-27 14:45:21.292 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:21.294 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I delete the previously created API note
+2026-05-27 14:45:21.294 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b5fc53916b0295cdd044
+2026-05-27 14:45:21.895 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | DELETE /notes/6a16b5fc53916b0295cdd044 | 585ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:21.897 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:21.899 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 4 second(s)
+2026-05-27 14:45:21.899 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 585ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:21.900 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 585ms < 4000ms
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 514ms | PASS
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /notes | 477ms | PASS
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | DELETE /notes/6a16b5fc53916b0295cdd044 | 585ms | PASS
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 585ms | PASS
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:21.904 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-05 - Delete a note via API and verify removal | Status: PASSED ======
+2026-05-27 14:45:21.928 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-06 - All API endpoints respond within 4 seconds ======
+2026-05-27 14:45:21.928 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @performance, @TS-API-06]
+2026-05-27 14:45:21.929 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:21.929 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:21.929 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:21.930 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:22.533 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 526ms
+2026-05-27 14:45:22.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:22.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 526ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:22.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:22.553 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then all tested API endpoints should respond within 4 seconds
+2026-05-27 14:45:22.553 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:24.759 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 2189ms
+2026-05-27 14:45:24.759 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 2189ms (threshold: 2000ms) | ❌ FAIL
+2026-05-27 14:45:24.759 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:25.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 1061ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:25.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API POST /notes | category: Home | title: Perf Test Note
+2026-05-27 14:45:26.416 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /notes | 545ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:26.416 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b60153916b0295cdd051
+2026-05-27 14:45:27.047 [TestNG-test-Chrome - All Scenarios-1] ERROR com.capstone.hooks.Hooks - SCENARIO FAILED: TS-API-06 - All API endpoints respond within 4 seconds
+2026-05-27 14:45:27.048 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:27.050 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 526ms | PASS
+2026-05-27 14:45:27.051 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 2189ms | FAIL
+2026-05-27 14:45:27.052 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 1061ms | PASS
+2026-05-27 14:45:27.052 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /notes | 545ms | PASS
+2026-05-27 14:45:27.052 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:27.052 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-06 - All API endpoints respond within 4 seconds | Status: FAILED ======
+2026-05-27 14:45:27.059 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.utils.RetryAnalyzer - [AGENTIC RETRY] Test 'runScenario' failed on thread 'TestNG-test-Chrome - All Scenarios-1'. Attempting automated re-run (1 out of 2)...
+2026-05-27 14:45:27.071 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-06 - All API endpoints respond within 4 seconds ======
+2026-05-27 14:45:27.071 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @performance, @TS-API-06]
+2026-05-27 14:45:27.071 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:27.072 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:27.072 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:27.072 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:27.626 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 540ms
+2026-05-27 14:45:27.642 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:27.642 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 540ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:27.642 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:27.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then all tested API endpoints should respond within 4 seconds
+2026-05-27 14:45:27.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:28.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 520ms
+2026-05-27 14:45:28.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 520ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:28.183 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:29.853 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 1653ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:29.854 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API POST /notes | category: Home | title: Perf Test Note
+2026-05-27 14:45:30.371 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /notes | 493ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:30.371 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b60553916b0295cdd060
+2026-05-27 14:45:30.959 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - All API endpoints responded within 2000ms
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 540ms | PASS
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 520ms | PASS
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 1653ms | PASS
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /notes | 493ms | PASS
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:30.962 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-06 - All API endpoints respond within 4 seconds | Status: PASSED ======
+2026-05-27 14:45:30.981 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-03b - GET notes with different auth scenarios ======
+2026-05-27 14:45:30.981 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @TS-API-03]
+2026-05-27 14:45:30.981 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:30.985 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:30.985 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:30.985 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:31.721 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 723ms
+2026-05-27 14:45:31.742 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:31.742 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 723ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:31.742 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:31.743 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with the auth token
+2026-05-27 14:45:31.743 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:32.340 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 580ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:32.341 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - GET /notes response: 200 | time: 580ms
+2026-05-27 14:45:32.342 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:32.345 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:32.345 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 723ms | PASS
+2026-05-27 14:45:32.345 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 580ms | PASS
+2026-05-27 14:45:32.345 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:32.349 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-03b - GET notes with different auth scenarios | Status: PASSED ======
+2026-05-27 14:45:32.368 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-API-03b - GET notes with different auth scenarios ======
+2026-05-27 14:45:32.369 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@api, @api, @TS-API-03]
+2026-05-27 14:45:32.369 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:45:32.369 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:32.369 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:32.369 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:32.952 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 545ms
+2026-05-27 14:45:32.973 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:32.975 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 545ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:32.975 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:32.977 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with the auth token
+2026-05-27 14:45:32.977 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:33.775 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes | 780ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:33.775 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - GET /notes response: 200 | time: 780ms
+2026-05-27 14:45:33.776 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:33.780 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:33.780 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 545ms | PASS
+2026-05-27 14:45:33.781 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes | 780ms | PASS
+2026-05-27 14:45:33.781 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:33.782 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-API-03b - GET notes with different auth scenarios | Status: PASSED ======
+2026-05-27 14:45:33.797 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-E2E-01 - Note created via UI appears in the API response ======
+2026-05-27 14:45:33.797 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@e2e, @e2e, @smoke, @TS-E2E-01]
+2026-05-27 14:45:33.797 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:45:33.797 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:45:36.963 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:45:36.980 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:36.981 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:36.981 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:37.561 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 547ms
+2026-05-27 14:45:37.601 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:37.602 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 547ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:37.602 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:37.665 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:45:37.687 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:45:37.718 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:45:37.718 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:45:39.079 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:45:39.181 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:45:39.366 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:45:39.496 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:45:39.619 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:45:39.692 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:45:39.777 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:45:39.853 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:45:39.991 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:45:40.010 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:45:40.011 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:45:40.802 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:45:40.956 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user creates a note | Category: Home | Title: E2E Sync Test Note
+2026-05-27 14:45:40.956 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Clicking Add Note button
+2026-05-27 14:45:41.155 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: [data-testid='add-new-note']
+2026-05-27 14:45:41.272 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Selecting category: Home
+2026-05-27 14:45:41.326 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Selecting 'Home' from dropdown: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:45:41.329 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:45:41.447 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note title: E2E Sync Test Note
+2026-05-27 14:45:41.516 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='note-title']
+2026-05-27 14:45:41.691 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note description
+2026-05-27 14:45:41.743 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: textarea[data-testid='note-description']
+2026-05-27 14:45:41.946 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Submitting note form
+2026-05-27 14:45:41.990 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='note-submit']
+2026-05-27 14:45:46.278 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Note creation submitted and dashboard refreshed. Stored in ScenarioContext: title='E2E Sync Test Note'
+2026-05-27 14:45:47.057 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'E2E Sync Test Note' should appear in the notes list
+2026-05-27 14:45:51.414 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note created in UI should appear in the API response (E2E validation)
+2026-05-27 14:45:51.414 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:52.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 2 second(s)
+2026-05-27 14:45:52.183 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 428ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:52.183 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 428ms < 2000ms
+2026-05-27 14:45:52.488 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note category and title should match between UI and API
+2026-05-27 14:45:52.488 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:45:53.571 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes/6a16b61153916b0295cdd07f
+2026-05-27 14:45:54.172 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes/6a16b61153916b0295cdd07f | 537ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:54.298 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI title: 'E2E Sync Test Note' | API title: 'E2E Sync Test Note'
+2026-05-27 14:45:54.300 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI category: 'Home' | API category: 'Home'
+2026-05-27 14:45:54.301 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - E2E FIELD MATCH VALIDATED: Title and Category match between UI and API
+2026-05-27 14:45:54.581 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:45:54.581 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 547ms | PASS
+2026-05-27 14:45:54.582 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 428ms | PASS
+2026-05-27 14:45:54.582 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes/6a16b61153916b0295cdd07f | 537ms | PASS
+2026-05-27 14:45:54.582 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:45:55.042 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:45:55.043 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:45:55.043 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-E2E-01 - Note created via UI appears in the API response | Status: PASSED ======
+2026-05-27 14:45:55.095 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-E2E-02 - Note deleted via API disappears from the UI ======
+2026-05-27 14:45:55.095 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@e2e, @e2e, @TS-E2E-02]
+2026-05-27 14:45:55.095 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:45:55.095 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:45:56.180 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:45:56.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:45:56.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:45:56.182 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:45:57.222 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 1010ms
+2026-05-27 14:45:57.241 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:45:57.242 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 1010ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:57.242 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:45:57.377 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I create a note via API | [Work] E2E Reverse Sync Note
+2026-05-27 14:45:57.378 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API POST /notes | category: Work | title: E2E Reverse Sync Note
+2026-05-27 14:45:57.876 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /notes | 461ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:45:57.930 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Note created via API. ID: 6a16b62053916b0295cdd0a1
+2026-05-27 14:45:58.070 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:45:58.185 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:45:58.186 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:45:58.186 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:45:58.186 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:45:59.581 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:46:00.268 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:46:00.456 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:46:01.163 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:46:01.568 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:46:03.642 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:46:04.629 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:46:04.820 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:46:05.999 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.LoginPage - Standard login click intercepted by an overlay/ad banner. Executing JavaScript click fallback. Error: element click intercepted: Element <button data-testid="login-submit" type="submit" class="btn btn-lg btn-primary d-block w-100">...</button> is not clickable at point (722, 530). Other element would receive the click: <div class="grippy-host"></div>
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc086461b8a781c8da163c3cfa8f6543, clickElement {id=f.106C862A2363434CE9085BA82EE42967.d.24F491336CDADEABF89B25F4514B793A.e.19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60878}, goog:processID: 38052, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60878/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bc086461b8a781c8da163c3cfa8f6543)] -> css selector: button[data-testid='login-submit']]
+Session ID: bc086461b8a781c8da163c3cfa8f6543
+2026-05-27 14:46:06.052 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:46:06.075 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:46:06.075 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:46:06.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:46:07.072 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'E2E Reverse Sync Note' should appear in the notes list
+2026-05-27 14:46:15.977 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I delete the note via API using stored note ID
+2026-05-27 14:46:15.978 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b62053916b0295cdd0a1
+2026-05-27 14:46:16.852 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | DELETE /notes/6a16b62053916b0295cdd0a1 | 863ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:46:16.852 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - DELETE /notes/6a16b62053916b0295cdd0a1 response: 200
+2026-05-27 14:46:17.244 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:46:17.565 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note deleted via API should not appear in the UI (reverse E2E)
+2026-05-27 14:46:17.565 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:46:29.330 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - REVERSE E2E VALIDATED: Note 'E2E Reverse Sync Note' deleted via API — confirmed absent from UI
+2026-05-27 14:46:29.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:46:29.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 1010ms | PASS
+2026-05-27 14:46:29.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /notes | 461ms | PASS
+2026-05-27 14:46:29.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | DELETE /notes/6a16b62053916b0295cdd0a1 | 863ms | PASS
+2026-05-27 14:46:29.644 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:46:30.389 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:46:30.390 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:46:30.390 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-E2E-02 - Note deleted via API disappears from the UI | Status: PASSED ======
+2026-05-27 14:46:30.412 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI ======
+2026-05-27 14:46:30.412 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@e2e, @e2e, @TS-E2E-04]
+2026-05-27 14:46:30.412 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:46:30.412 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:46:31.249 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:46:31.252 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:46:31.253 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:46:31.253 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:46:32.244 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 953ms
+2026-05-27 14:46:32.266 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:46:32.266 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 953ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:46:32.266 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:46:32.324 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:46:32.325 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:46:32.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:46:32.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:46:38.581 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:46:38.642 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:46:38.747 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:46:38.873 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:46:38.909 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:46:38.998 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:46:39.104 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:46:39.154 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:46:40.310 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.LoginPage - Standard login click intercepted by an overlay/ad banner. Executing JavaScript click fallback. Error: element click intercepted: Element is not clickable at point (722, 729)
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7ce006ddf60f7652e813112340568ef, clickElement {id=f.CF9BB872753BA1A783E5461EA443A4AB.d.2AA566E5A776B1259C2B8163867B5A5A.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64278}, goog:processID: 7748, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64278/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d7ce006ddf60f7652e813112340568ef)] -> css selector: button[data-testid='login-submit']]
+Session ID: d7ce006ddf60f7652e813112340568ef
+2026-05-27 14:46:40.339 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:46:40.357 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:46:40.357 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:46:40.729 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:46:40.873 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user creates a note | Category: Personal | Title: Full Lifecycle E2E Note
+2026-05-27 14:46:40.873 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Clicking Add Note button
+2026-05-27 14:46:41.036 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: [data-testid='add-new-note']
+2026-05-27 14:46:41.208 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Selecting category: Personal
+2026-05-27 14:46:41.253 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Selecting 'Personal' from dropdown: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:46:41.253 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:46:41.437 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note title: Full Lifecycle E2E Note
+2026-05-27 14:46:41.465 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='note-title']
+2026-05-27 14:46:41.671 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note description
+2026-05-27 14:46:41.721 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: textarea[data-testid='note-description']
+2026-05-27 14:46:42.073 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Submitting note form
+2026-05-27 14:46:42.134 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='note-submit']
+2026-05-27 14:46:45.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Note creation submitted and dashboard refreshed. Stored in ScenarioContext: title='Full Lifecycle E2E Note'
+2026-05-27 14:46:45.674 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'Full Lifecycle E2E Note' should appear in the notes list
+2026-05-27 14:46:49.195 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note created in UI should appear in the API response (E2E validation)
+2026-05-27 14:46:49.196 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:46:52.199 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note category and title should match between UI and API
+2026-05-27 14:46:52.199 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:46:52.908 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes/6a16b64d53916b0295cdd154
+2026-05-27 14:46:53.419 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes/6a16b64d53916b0295cdd154 | 422ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:46:53.504 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI title: 'Full Lifecycle E2E Note' | API title: 'Full Lifecycle E2E Note'
+2026-05-27 14:46:53.504 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI category: 'Personal' | API category: 'Personal'
+2026-05-27 14:46:53.505 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - E2E FIELD MATCH VALIDATED: Title and Category match between UI and API
+2026-05-27 14:46:53.639 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then I find the note ID in the API and store it
+2026-05-27 14:46:53.639 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:46:56.230 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Note ID stored: 6a16b64d53916b0295cdd154 for title: 'Full Lifecycle E2E Note'
+2026-05-27 14:46:56.343 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I delete the note via API using stored note ID
+2026-05-27 14:46:56.344 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b64d53916b0295cdd154
+2026-05-27 14:46:58.848 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | DELETE /notes/6a16b64d53916b0295cdd154 | 2488ms (threshold: 2000ms) | ❌ FAIL
+2026-05-27 14:46:58.849 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - DELETE /notes/6a16b64d53916b0295cdd154 response: 200
+2026-05-27 14:46:58.967 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:46:59.094 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note deleted via API should not appear in the UI (reverse E2E)
+2026-05-27 14:46:59.094 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:47:02.568 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - REVERSE E2E VALIDATED: Note 'Full Lifecycle E2E Note' deleted via API — confirmed absent from UI
+2026-05-27 14:47:02.735 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 2 second(s)
+2026-05-27 14:47:02.735 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 2488ms (threshold: 2000ms) | ❌ FAIL
+2026-05-27 14:47:02.860 [TestNG-test-Chrome - All Scenarios-1] ERROR com.capstone.hooks.Hooks - SCENARIO FAILED: TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI
+2026-05-27 14:47:02.976 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Screenshot saved successfully: C:\Users\RAUNAK\Downloads\Sprint 3 d\capstone_project\target\screenshots\TS-E2E-04_-_Complete_note_lifecycle__create_in_UI__20260527_144702_973.png
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 953ms | PASS
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes/6a16b64d53916b0295cdd154 | 422ms | PASS
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | DELETE /notes/6a16b64d53916b0295cdd154 | 2488ms | FAIL
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 2488ms | FAIL
+2026-05-27 14:47:02.979 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:47:03.325 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:03.326 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:47:03.326 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI | Status: FAILED ======
+2026-05-27 14:47:03.330 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.utils.RetryAnalyzer - [AGENTIC RETRY] Test 'runScenario' failed on thread 'TestNG-test-Chrome - All Scenarios-1'. Attempting automated re-run (1 out of 2)...
+2026-05-27 14:47:03.346 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI ======
+2026-05-27 14:47:03.346 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@e2e, @e2e, @TS-E2E-04]
+2026-05-27 14:47:03.346 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:47:03.346 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:04.104 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:47:04.106 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:47:04.107 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Given I authenticate via API and store token for subsequent steps
+2026-05-27 14:47:04.107 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunakk@gmail.com
+2026-05-27 14:47:04.784 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 200 | time: 634ms
+2026-05-27 14:47:04.825 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Auth token extracted successfully (length: 64)
+2026-05-27 14:47:04.826 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login | 634ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:04.826 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Token stored successfully. Test can now proceed.
+2026-05-27 14:47:04.893 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:47:04.893 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:47:04.893 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:04.893 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:05.274 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:47:06.545 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:47:06.697 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:47:06.860 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:47:06.911 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:47:06.975 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:47:07.079 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:47:07.127 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:47:08.207 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.LoginPage - Standard login click intercepted by an overlay/ad banner. Executing JavaScript click fallback. Error: element click intercepted: Element is not clickable at point (722, 737)
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cdd752e3e0487f2952297209f7f1fabb, clickElement {id=f.71E8F3DEB32D1E1D3A33090A063AAC11.d.6DF7F171559FC3CE947EF6F6B81A8122.e.19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51206}, goog:processID: 15860, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51206/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cdd752e3e0487f2952297209f7f1fabb)] -> css selector: button[data-testid='login-submit']]
+Session ID: cdd752e3e0487f2952297209f7f1fabb
+2026-05-27 14:47:08.231 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:47:08.249 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:08.249 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:47:08.608 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:47:08.760 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user creates a note | Category: Personal | Title: Full Lifecycle E2E Note
+2026-05-27 14:47:08.760 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Clicking Add Note button
+2026-05-27 14:47:08.927 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: [data-testid='add-new-note']
+2026-05-27 14:47:09.073 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Selecting category: Personal
+2026-05-27 14:47:09.130 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Selecting 'Personal' from dropdown: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:47:09.131 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:47:09.314 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note title: Full Lifecycle E2E Note
+2026-05-27 14:47:09.343 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='note-title']
+2026-05-27 14:47:09.537 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note description
+2026-05-27 14:47:09.566 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: textarea[data-testid='note-description']
+2026-05-27 14:47:09.812 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Submitting note form
+2026-05-27 14:47:09.839 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='note-submit']
+2026-05-27 14:47:13.233 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Note creation submitted and dashboard refreshed. Stored in ScenarioContext: title='Full Lifecycle E2E Note'
+2026-05-27 14:47:13.378 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'Full Lifecycle E2E Note' should appear in the notes list
+2026-05-27 14:47:16.620 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note created in UI should appear in the API response (E2E validation)
+2026-05-27 14:47:16.621 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:47:17.627 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note category and title should match between UI and API
+2026-05-27 14:47:17.627 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:47:19.105 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes/6a16b66953916b0295cdd25a
+2026-05-27 14:47:19.699 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes/6a16b66953916b0295cdd25a | 563ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:19.746 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI title: 'Full Lifecycle E2E Note' | API title: 'Full Lifecycle E2E Note'
+2026-05-27 14:47:19.746 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - UI category: 'Personal' | API category: 'Personal'
+2026-05-27 14:47:19.746 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - E2E FIELD MATCH VALIDATED: Title and Category match between UI and API
+2026-05-27 14:47:19.874 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then I find the note ID in the API and store it
+2026-05-27 14:47:19.874 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes
+2026-05-27 14:47:20.458 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Note ID stored: 6a16b66953916b0295cdd25a for title: 'Full Lifecycle E2E Note'
+2026-05-27 14:47:20.591 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I delete the note via API using stored note ID
+2026-05-27 14:47:20.591 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API DELETE /notes/6a16b66953916b0295cdd25a
+2026-05-27 14:47:21.875 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | DELETE /notes/6a16b66953916b0295cdd25a | 1237ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:21.876 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - DELETE /notes/6a16b66953916b0295cdd25a response: 200
+2026-05-27 14:47:21.995 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response status should be 200
+2026-05-27 14:47:22.150 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the note deleted via API should not appear in the UI (reverse E2E)
+2026-05-27 14:47:22.150 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:47:26.192 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - REVERSE E2E VALIDATED: Note 'Full Lifecycle E2E Note' deleted via API — confirmed absent from UI
+2026-05-27 14:47:26.357 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 2 second(s)
+2026-05-27 14:47:26.376 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 1237ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:26.376 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 1237ms < 2000ms
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login | 634ms | PASS
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes/6a16b66953916b0295cdd25a | 563ms | PASS
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | DELETE /notes/6a16b66953916b0295cdd25a | 1237ms | PASS
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 1237ms | PASS
+2026-05-27 14:47:26.579 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:47:27.381 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:27.381 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:47:27.381 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI | Status: PASSED ======
+2026-05-27 14:47:27.398 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-01 - Access rejected when no auth token is provided ======
+2026-05-27 14:47:27.399 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @smoke, @TS-NEG-01]
+2026-05-27 14:47:27.399 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:47:27.399 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:28.160 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:47:28.162 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:47:28.163 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes without an auth token
+2026-05-27 14:47:28.163 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes WITHOUT token (negative test)
+2026-05-27 14:47:28.632 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes (no token) | 445ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:28.756 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should not be authorised
+2026-05-27 14:47:28.881 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should contain an error message
+2026-05-27 14:47:28.955 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Error message in response: 'No authentication token specified in x-auth-token header'
+2026-05-27 14:47:29.006 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the API response time should be within 5 second(s)
+2026-05-27 14:47:29.006 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | Response Time Check | 445ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:29.006 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Performance PASS: 445ms < 5000ms
+2026-05-27 14:47:29.054 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:47:29.054 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes (no token) | 445ms | PASS
+2026-05-27 14:47:29.054 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | Response Time Check | 445ms | PASS
+2026-05-27 14:47:29.054 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:47:29.294 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:29.294 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:47:29.294 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-01 - Access rejected when no auth token is provided | Status: PASSED ======
+2026-05-27 14:47:29.304 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-02 - Access rejected with a gibberish auth token ======
+2026-05-27 14:47:29.305 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @TS-NEG-02]
+2026-05-27 14:47:29.305 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:47:29.305 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:30.109 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:47:30.111 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:47:30.111 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with invalid token: this-is-not-a-valid-token-xyz123
+2026-05-27 14:47:30.111 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes with INVALID token (negative test)
+2026-05-27 14:47:30.705 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes (invalid token) | 442ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:30.769 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should not be authorised
+2026-05-27 14:47:30.824 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should contain an error message
+2026-05-27 14:47:30.995 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Error message in response: 'Access token is not valid or has expired, you will need to login'
+2026-05-27 14:47:31.173 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:47:31.184 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes (invalid token) | 442ms | PASS
+2026-05-27 14:47:31.184 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:47:32.252 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:32.252 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:47:32.253 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-02 - Access rejected with a gibberish auth token | Status: PASSED ======
+2026-05-27 14:47:32.270 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-02b - Access rejected with an expired-format JWT token ======
+2026-05-27 14:47:32.270 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @TS-NEG-02b]
+2026-05-27 14:47:32.270 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:47:32.270 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:33.139 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:47:33.141 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:47:33.141 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: When I call GET /notes with invalid token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.INVALID.SIGNATURE
+2026-05-27 14:47:33.142 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API GET /notes with INVALID token (negative test)
+2026-05-27 14:47:33.608 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | GET /notes (invalid token) | 431ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:47:33.689 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should not be authorised
+2026-05-27 14:47:33.771 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:47:33.771 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | GET /notes (invalid token) | 431ms | PASS
+2026-05-27 14:47:33.771 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:47:33.934 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:33.934 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:47:33.934 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-02b - Access rejected with an expired-format JWT token | Status: PASSED ======
+2026-05-27 14:47:33.944 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-03 - UI login rejected for invalid credentials ======
+2026-05-27 14:47:33.944 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @ui, @TS-NEG-03]
+2026-05-27 14:47:33.944 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:47:33.944 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:47:34.713 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:47:34.721 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: User navigates to login page
+2026-05-27 14:47:34.721 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:47:34.724 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:34.724 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:42.110 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873454740ms | URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:47:42.110 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF UI | Login Page Load | -1779873454740ms (threshold: 5000ms) | ✅ PASS
+2026-05-27 14:47:42.242 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Login using supplied credentials
+2026-05-27 14:47:42.242 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: nonexistent@capstone.com
+2026-05-27 14:47:42.292 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:47:42.362 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:47:42.535 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:47:42.565 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:47:42.684 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:47:42.770 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:47:42.811 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:47:43.035 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:47:43.337 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:47:43.391 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login error message: Incorrect email address or password
+2026-05-27 14:47:43.466 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-NEG-03 - UI login rejected for invalid credentials
+2026-05-27 14:47:43.466 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:03.540 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.NotesPage - Dashboard structure not visible in timeframe: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.cssSelector: nav.navbar || visibility of element located by By.cssSelector: [data-testid='add-new-note'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64180}, goog:processID: 28912, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64180/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a62a2b73b0b3c662003172ba82fb9600
+2026-05-27 14:48:03.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:48:03.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - UI | Login Page Load | -1779873454740ms | PASS
+2026-05-27 14:48:03.545 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:48:03.802 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:03.803 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:48:03.803 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-03 - UI login rejected for invalid credentials | Status: PASSED ======
+2026-05-27 14:48:03.813 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-03 - UI login rejected for invalid credentials ======
+2026-05-27 14:48:03.813 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @ui, @TS-NEG-03]
+2026-05-27 14:48:03.813 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:48:03.813 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:04.708 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:48:04.710 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: User navigates to login page
+2026-05-27 14:48:04.710 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:04.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:04.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:06.526 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873484737ms | URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:06.526 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF UI | Login Page Load | -1779873484737ms (threshold: 5000ms) | ✅ PASS
+2026-05-27 14:48:06.619 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Login using supplied credentials
+2026-05-27 14:48:06.620 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunak@gmail.com
+2026-05-27 14:48:06.648 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:06.715 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:06.857 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:48:06.934 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:07.058 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:07.241 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:48:07.326 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:48:07.659 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:48:07.997 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:48:08.043 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login error message: Incorrect email address or password
+2026-05-27 14:48:08.201 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-NEG-03 - UI login rejected for invalid credentials
+2026-05-27 14:48:08.201 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:28.394 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.NotesPage - Dashboard structure not visible in timeframe: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.cssSelector: nav.navbar || visibility of element located by By.cssSelector: [data-testid='add-new-note'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52322}, goog:processID: 45212, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52322/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84dc1d962b6bf45661c41d716cb2bb59
+2026-05-27 14:48:28.397 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:48:28.398 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - UI | Login Page Load | -1779873484737ms | PASS
+2026-05-27 14:48:28.398 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:48:28.677 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:28.677 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:48:28.677 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-03 - UI login rejected for invalid credentials | Status: PASSED ======
+2026-05-27 14:48:28.686 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-03 - UI login rejected for invalid credentials ======
+2026-05-27 14:48:28.686 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @ui, @TS-NEG-03]
+2026-05-27 14:48:28.686 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:48:28.687 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:29.437 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:48:29.439 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: User navigates to login page
+2026-05-27 14:48:29.440 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:29.441 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:29.441 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:30.877 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873509453ms | URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:30.877 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF UI | Login Page Load | -1779873509453ms (threshold: 5000ms) | ✅ PASS
+2026-05-27 14:48:31.012 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Login using supplied credentials
+2026-05-27 14:48:31.172 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: hacker@evil.com
+2026-05-27 14:48:31.773 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:31.926 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:32.076 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:48:32.125 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:32.242 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:32.417 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:48:32.499 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:48:34.064 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.LoginPage - Standard login click intercepted by an overlay/ad banner. Executing JavaScript click fallback. Error: element click intercepted: Element <button data-testid="login-submit" type="submit" class="btn btn-lg btn-primary d-block w-100">...</button> is not clickable at point (722, 539). Other element would receive the click: <div class="grippy-host"></div>
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f1e26674aebb254def2e71dbf532f797, clickElement {id=f.1FE6BB73F892D6F0E4E94DF87B2EA180.d.56D3E433935A2450CC015109470B4C78.e.21}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63334}, goog:processID: 25460, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63334/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f1e26674aebb254def2e71dbf532f797)] -> css selector: button[data-testid='login-submit']]
+Session ID: f1e26674aebb254def2e71dbf532f797
+2026-05-27 14:48:34.267 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:48:34.470 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:48:34.526 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login error message: Incorrect email address or password
+2026-05-27 14:48:34.681 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-NEG-03 - UI login rejected for invalid credentials
+2026-05-27 14:48:34.681 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:54.763 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.NotesPage - Dashboard structure not visible in timeframe: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.cssSelector: nav.navbar || visibility of element located by By.cssSelector: [data-testid='add-new-note'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63334}, goog:processID: 25460, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63334/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1e26674aebb254def2e71dbf532f797
+2026-05-27 14:48:54.769 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:48:54.769 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - UI | Login Page Load | -1779873509453ms | PASS
+2026-05-27 14:48:54.769 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:48:55.106 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:55.106 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:48:55.106 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-03 - UI login rejected for invalid credentials | Status: PASSED ======
+2026-05-27 14:48:55.122 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-04 - API login endpoints must reject bad payloads ======
+2026-05-27 14:48:55.122 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @api, @TS-NEG-04]
+2026-05-27 14:48:55.122 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:48:55.122 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:48:55.123 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: API login attempt with custom credentials | Email: wrong@example.com
+2026-05-27 14:48:55.123 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: wrong@example.com
+2026-05-27 14:48:55.702 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 401 | time: 567ms
+2026-05-27 14:48:55.702 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login (Custom Payload) | 567ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:48:55.702 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - API Custom login complete. Status code received: 401
+2026-05-27 14:48:55.703 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should contain an error message
+2026-05-27 14:48:55.714 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Error message in response: 'Incorrect email address or password'
+2026-05-27 14:48:55.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:48:55.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login (Custom Payload) | 567ms | PASS
+2026-05-27 14:48:55.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:48:55.716 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-04 - API login endpoints must reject bad payloads | Status: PASSED ======
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-NEG-04 - API login endpoints must reject bad payloads ======
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@negative, @negative, @api, @TS-NEG-04]
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - API-only execution matrix detected — skipping browser initialisation
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - ApiClient initialised. Base URI: https://practice.expandtesting.com/notes/api
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: API login attempt with custom credentials | Email: raunak@gmail.com
+2026-05-27 14:48:55.725 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - API Login | email: raunak@gmail.com
+2026-05-27 14:48:56.316 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.api.ApiClient - Login response status: 401 | time: 582ms
+2026-05-27 14:48:56.316 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF API | POST /users/login (Custom Payload) | 582ms (threshold: 2000ms) | ✅ PASS
+2026-05-27 14:48:56.316 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - API Custom login complete. Status code received: 401
+2026-05-27 14:48:56.317 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - STEP: Then the response should contain an error message
+2026-05-27 14:48:56.325 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.ApiStepDefs - Error message in response: 'Incorrect email address or password'
+2026-05-27 14:48:56.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:48:56.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - API | POST /users/login (Custom Payload) | 582ms | PASS
+2026-05-27 14:48:56.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:48:56.327 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-NEG-04 - API login endpoints must reject bad payloads | Status: PASSED ======
+2026-05-27 14:48:56.335 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-UI-01 - Successful login with valid credentials ======
+2026-05-27 14:48:56.335 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@ui, @smoke, @ui, @smoke, @TS-UI-01]
+2026-05-27 14:48:56.335 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:48:56.335 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:48:57.117 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:48:57.119 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: User navigates to login page
+2026-05-27 14:48:57.119 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:48:57.120 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:57.120 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:58.882 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873537136ms | URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:48:58.882 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF UI | Login Page Load | -1779873537136ms (threshold: 5000ms) | ✅ PASS
+2026-05-27 14:48:58.982 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Login using configured credentials
+2026-05-27 14:48:58.982 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:48:59.035 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:59.102 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:48:59.237 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:48:59.266 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:59.353 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:48:59.421 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:48:59.455 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:48:59.773 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Verify dashboard redirection
+2026-05-27 14:48:59.774 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:48:59.788 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:01.356 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873537136ms | URL: https://practice.expandtesting.com/notes/app
+2026-05-27 14:49:01.544 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-UI-01 - Successful login with valid credentials
+2026-05-27 14:49:01.544 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:01.591 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Starting automated dashboard purge sequence...
+2026-05-27 14:49:11.616 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Purge sequence complete. Dashboard is completely clean.
+2026-05-27 14:49:11.619 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:49:11.619 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - UI | Login Page Load | -1779873537136ms | PASS
+2026-05-27 14:49:11.619 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:49:11.825 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:49:11.825 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:49:11.825 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-UI-01 - Successful login with valid credentials | Status: PASSED ======
+2026-05-27 14:49:11.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-UI-02d - Login with various invalid credentials ======
+2026-05-27 14:49:11.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@ui, @smoke, @ui, @negative, @TS-UI-02]
+2026-05-27 14:49:11.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:49:11.836 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:49:12.581 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:49:12.582 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: User navigates to login page
+2026-05-27 14:49:12.583 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:12.583 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:12.583 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:14.014 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Page load time: -1779873552595ms | URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:14.014 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - PERF UI | Login Page Load | -1779873552595ms (threshold: 5000ms) | ✅ PASS
+2026-05-27 14:49:14.093 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.LoginStepDefs - STEP: Login using supplied credentials
+2026-05-27 14:49:14.093 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: notregistered@test.com
+2026-05-27 14:49:14.458 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:49:14.590 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:49:14.700 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:49:14.723 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:49:14.767 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:49:14.835 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:49:14.871 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:49:15.211 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:49:15.616 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: [data-testid='alert-message']
+2026-05-27 14:49:15.658 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login error message: Incorrect email address or password
+2026-05-27 14:49:15.835 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-UI-02d - Login with various invalid credentials
+2026-05-27 14:49:15.836 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:35.935 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.NotesPage - Dashboard structure not visible in timeframe: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.cssSelector: nav.navbar || visibility of element located by By.cssSelector: [data-testid='add-new-note'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60334}, goog:processID: 46268, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60334/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d4489b1024f49525db87eec51249accd
+2026-05-27 14:49:35.937 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - === PERFORMANCE SUMMARY ===
+2026-05-27 14:49:35.937 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - UI | Login Page Load | -1779873552595ms | PASS
+2026-05-27 14:49:35.937 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.utils.PerformanceTracker - ===========================
+2026-05-27 14:49:36.186 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:49:36.186 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:49:36.186 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-UI-02d - Login with various invalid credentials | Status: PASSED ======
+2026-05-27 14:49:36.195 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-UI-03 - Create a note and verify it appears in the list ======
+2026-05-27 14:49:36.196 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@ui, @ui, @smoke, @TS-UI-03]
+2026-05-27 14:49:36.196 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:49:36.196 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:49:36.970 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:49:36.973 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:49:36.974 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:36.975 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:36.975 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:38.256 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:49:38.302 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:49:38.549 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:49:38.687 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:49:38.710 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:49:38.756 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:49:38.865 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:49:38.890 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:49:39.965 [TestNG-test-Chrome - All Scenarios-1] WARN  com.capstone.pages.LoginPage - Standard login click intercepted by an overlay/ad banner. Executing JavaScript click fallback. Error: element click intercepted: Element is not clickable at point (722, 794)
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d6fc423dfd339b6f13cadacd779015d, clickElement {id=f.D17643E748F06DD81EBD591FA9E619E2.d.81234716FC0082509CDC0638600FA4D5.e.20}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\RAUNAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57233}, goog:processID: 13332, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57233/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8d6fc423dfd339b6f13cadacd779015d)] -> css selector: button[data-testid='login-submit']]
+Session ID: 8d6fc423dfd339b6f13cadacd779015d
+2026-05-27 14:49:39.985 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:49:40.000 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:49:40.000 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:40.426 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:49:40.556 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user creates a note | Category: Home | Title: My First Test Note
+2026-05-27 14:49:40.557 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Clicking Add Note button
+2026-05-27 14:49:40.680 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: [data-testid='add-new-note']
+2026-05-27 14:49:40.780 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Selecting category: Home
+2026-05-27 14:49:40.810 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Selecting 'Home' from dropdown: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:49:40.810 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:49:40.907 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note title: My First Test Note
+2026-05-27 14:49:40.936 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='note-title']
+2026-05-27 14:49:41.081 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note description
+2026-05-27 14:49:41.106 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: textarea[data-testid='note-description']
+2026-05-27 14:49:41.297 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Submitting note form
+2026-05-27 14:49:41.329 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='note-submit']
+2026-05-27 14:49:44.663 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Note creation submitted and dashboard refreshed. Stored in ScenarioContext: title='My First Test Note'
+2026-05-27 14:49:44.922 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'My First Test Note' should appear in the notes list
+2026-05-27 14:49:49.233 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the dashboard page load time should be within limits
+2026-05-27 14:49:49.233 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Performance validation metrics pass successfully.
+2026-05-27 14:49:49.395 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-UI-03 - Create a note and verify it appears in the list
+2026-05-27 14:49:49.396 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:49:49.424 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Starting automated dashboard purge sequence...
+2026-05-27 14:49:59.487 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Purge sequence complete. Dashboard is completely clean.
+2026-05-27 14:49:59.773 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:49:59.774 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:49:59.774 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-UI-03 - Create a note and verify it appears in the list | Status: PASSED ======
+2026-05-27 14:49:59.784 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO START: TS-UI-07 - Delete a note and verify it is removed from the list ======
+2026-05-27 14:49:59.784 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Tags: [@ui, @ui, @TS-UI-07]
+2026-05-27 14:49:59.784 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Initialising browser: chrome | headless: false
+2026-05-27 14:49:59.784 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Initialising chrome driver | headless=false | thread=TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:50:00.570 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver initialised successfully with EAGER execution strategy: ChromeDriver
+2026-05-27 14:50:00.571 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Given the user is logged in to the notes dashboard
+2026-05-27 14:50:00.572 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:50:00.572 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Navigating to login page: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:50:00.572 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.BasePage - Navigating to: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:50:01.139 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering email: raunakk@gmail.com
+2026-05-27 14:50:02.260 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:50:02.365 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-email']
+2026-05-27 14:50:02.491 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Entering password: ***
+2026-05-27 14:50:02.579 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:50:02.626 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='login-password']
+2026-05-27 14:50:02.710 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Clicking login button
+2026-05-27 14:50:02.744 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='login-submit']
+2026-05-27 14:50:02.848 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Waiting for redirect to notes dashboard...
+2026-05-27 14:50:02.863 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.LoginPage - Login successful. Current URL: https://practice.expandtesting.com/notes/app/login
+2026-05-27 14:50:02.863 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:50:03.268 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Successfully logged in and dashboard loaded
+2026-05-27 14:50:03.560 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user creates a note | Category: Work | Title: Note To Be Deleted
+2026-05-27 14:50:03.560 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Clicking Add Note button
+2026-05-27 14:50:03.607 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: [data-testid='add-new-note']
+2026-05-27 14:50:03.767 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Selecting category: Work
+2026-05-27 14:50:03.799 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Selecting 'Work' from dropdown: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:50:03.801 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - Waiting for element: By.cssSelector: select[data-testid='note-category']
+2026-05-27 14:50:03.913 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note title: Note To Be Deleted
+2026-05-27 14:50:03.975 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: input[data-testid='note-title']
+2026-05-27 14:50:04.155 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Entering note description
+2026-05-27 14:50:04.197 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: textarea[data-testid='note-description']
+2026-05-27 14:50:04.348 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Submitting note form
+2026-05-27 14:50:04.391 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.utils.SelfHealingLocator - Locator found: By.cssSelector: button[data-testid='note-submit']
+2026-05-27 14:50:08.331 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - Note creation submitted and dashboard refreshed. Stored in ScenarioContext: title='Note To Be Deleted'
+2026-05-27 14:50:08.493 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'Note To Be Deleted' should appear in the notes list
+2026-05-27 14:50:13.308 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: When the user deletes the note titled 'Note To Be Deleted'
+2026-05-27 14:50:13.310 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Attempting to delete note titled: Note To Be Deleted
+2026-05-27 14:50:13.356 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Target note card element verified on screen layout grid.
+2026-05-27 14:50:14.106 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Fired deletion tracking trigger.
+2026-05-27 14:50:14.252 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Fired system delete confirmation submission.
+2026-05-27 14:50:14.850 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - FR-07 Integration Success: Note card completely detached from browser viewport layout engine.
+2026-05-27 14:50:17.729 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.stepdefs.NotesStepDefs - STEP: Then the note 'Note To Be Deleted' should NOT appear in the notes list
+2026-05-27 14:50:21.340 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Executing post-scenario UI data cleanup hook for: TS-UI-07 - Delete a note and verify it is removed from the list
+2026-05-27 14:50:21.340 [TestNG-test-Chrome - All Scenarios-1] DEBUG com.capstone.pages.BasePage - BasePage initialised with driver: ChromeDriver
+2026-05-27 14:50:21.797 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Starting automated dashboard purge sequence...
+2026-05-27 14:50:31.872 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.pages.NotesPage - Purge sequence complete. Dashboard is completely clean.
+2026-05-27 14:50:32.222 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.drivers.DriverManager - Driver quit successfully for thread: TestNG-test-Chrome - All Scenarios-1
+2026-05-27 14:50:32.224 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - Browser driver detached successfully from execution context thread.
+2026-05-27 14:50:32.224 [TestNG-test-Chrome - All Scenarios-1] INFO  com.capstone.hooks.Hooks - ====== SCENARIO END: TS-UI-07 - Delete a note and verify it is removed from the list | Status: PASSED ======

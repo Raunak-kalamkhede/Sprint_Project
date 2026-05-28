@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="2" ignored="2" total="26" passed="22" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-27T14:45:05 IST" name="Capstone Notes Automation Suite" finished-at="2026-05-27T14:50:32 IST" duration-ms="326513">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-05-27T14:45:05 IST" name="Chrome - All Scenarios" finished-at="2026-05-27T14:50:32 IST" duration-ms="326513">
+      <class name="com.capstone.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:05 IST" name="setUpClass" finished-at="2026-05-27T14:45:07 IST" duration-ms="1306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3c6aa04a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:14 IST" duration-ms="6767" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-01 - Login API returns valid JWT auth token"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:15 IST" duration-ms="1137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-03 - GET notes returns list for authenticated user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:20 IST" duration-ms="4989" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-02 - Create note via API and verify it appears in GET notes"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:21 IST" duration-ms="1730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-05 - Delete a note via API and verify removal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:27 IST" duration-ms="5148" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-06 - All API endpoints respond within 4 seconds"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.capstone.stepdefs.ApiStepDefs.allTestedApiEndpointsShouldRespondWithin2Seconds(ApiStepDefs.java:465)
+at ✽.all tested API endpoints should respond within 4 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/api/api_tests.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:30 IST" duration-ms="3906" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-06 - All API endpoints respond within 4 seconds"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:32 IST" duration-ms="1383" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-03b - GET notes with different auth scenarios"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:33 IST" duration-ms="1430" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-API-03b - GET notes with different auth scenarios"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API - Notes REST API Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:45:55 IST" duration-ms="21266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-E2E-01 - Note created via UI appears in the API response"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["E2E - Hybrid UI and API Cross-Layer Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:45:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:46:30 IST" duration-ms="35339" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-E2E-02 - Note deleted via API disappears from the UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["E2E - Hybrid UI and API Cross-Layer Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method retried="true" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:46:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:47:03 IST" duration-ms="32931" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["E2E - Hybrid UI and API Cross-Layer Validation"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.capstone.stepdefs.ApiStepDefs.theApiResponseTimeShouldBeWithin(ApiStepDefs.java:284)
+at ✽.the API response time should be within 2 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/e2e/hybrid_e2e.feature:85)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:47:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:47:27 IST" duration-ms="24055" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["E2E - Hybrid UI and API Cross-Layer Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:47:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:47:29 IST" duration-ms="1908" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-01 - Access rejected when no auth token is provided"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:47:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:47:32 IST" duration-ms="2958" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-02 - Access rejected with a gibberish auth token"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:47:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:47:33 IST" duration-ms="1678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-02b - Access rejected with an expired-format JWT token"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:47:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:48:03 IST" duration-ms="29868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-03 - UI login rejected for invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:48:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:48:28 IST" duration-ms="24873" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-03 - UI login rejected for invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:48:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:48:55 IST" duration-ms="26431" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-03 - UI login rejected for invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:48:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:48:55 IST" duration-ms="604" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-04 - API login endpoints must reject bad payloads"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:48:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:48:56 IST" duration-ms="609" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-NEG-04 - API login endpoints must reject bad payloads"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Negative - Security and Error Handling Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:48:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:49:11 IST" duration-ms="15498" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-UI-01 - Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["UI - Login and Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:49:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:49:36 IST" duration-ms="24359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-UI-02d - Login with various invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["UI - Login and Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:49:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:49:59 IST" duration-ms="23589" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-UI-03 - Create a note and verify it appears in the list"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["UI - Notes CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:49:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T14:50:32 IST" duration-ms="32448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TS-UI-07 - Delete a note and verify it is removed from the list"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["UI - Notes CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.capstone.runners.TestRunner@bdc8014]" started-at="2026-05-27T14:50:32 IST" name="tearDownClass" finished-at="2026-05-27T14:50:32 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.capstone.runners.TestRunner -->
+    </test> <!-- Chrome - All Scenarios -->
+  </suite> <!-- Capstone Notes Automation Suite -->
+</testng-results>

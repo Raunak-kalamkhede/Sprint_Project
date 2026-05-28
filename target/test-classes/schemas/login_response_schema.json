@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Login Response Schema",
+  "description": "JSON Schema for POST /users/login API response",
+  "type": "object",
+  "required": ["success", "status", "message", "data"],
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "description": "Indicates if the request was successful",
+      "enum": [true]
+    },
+    "status": {
+      "type": "integer",
+      "description": "HTTP status code",
+      "enum": [200]
+    },
+    "message": {
+      "type": "string",
+      "description": "Human-readable success message"
+    },
+    "data": {
+      "type": "object",
+      "required": ["id", "name", "email", "token"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique user identifier",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "description": "User's display name",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "User's email address"
+        },
+        "token": {
+          "type": "string",
+          "description": "JWT authentication token",
+          "minLength": 20
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

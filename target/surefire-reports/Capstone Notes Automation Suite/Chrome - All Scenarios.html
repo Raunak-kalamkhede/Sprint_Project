@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>TestNG:  Chrome - All Scenarios</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome - All Scenarios</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>22/0/2</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 27 14:45:05 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>326 seconds (326513 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-05 - Delete a note via API and verify removal", "API - Notes REST API Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>0</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-UI-03 - Create a note and verify it appears in the list", "UI - Notes CRUD Operations"</td>
+<td></td>
+<td>23</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-02b - Access rejected with an expired-format JWT token", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-01 - Access rejected when no auth token is provided", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-UI-02d - Login with various invalid credentials", "UI - Login and Authentication"</td>
+<td></td>
+<td>24</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI", "E2E - Hybrid UI and API Cross-Layer Validation"</td>
+<td></td>
+<td>24</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>24</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-UI-01 - Successful login with valid credentials", "UI - Login and Authentication"</td>
+<td></td>
+<td>15</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-02 - Create note via API and verify it appears in GET notes", "API - Notes REST API Validation"</td>
+<td></td>
+<td>4</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>29</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-UI-07 - Delete a note and verify it is removed from the list", "UI - Notes CRUD Operations"</td>
+<td></td>
+<td>32</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-03 - GET notes returns list for authenticated user", "API - Notes REST API Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>26</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-E2E-01 - Note created via UI appears in the API response", "E2E - Hybrid UI and API Cross-Layer Validation"</td>
+<td></td>
+<td>21</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-02 - Access rejected with a gibberish auth token", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>2</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation"</td>
+<td></td>
+<td>3</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-01 - Login API returns valid JWT auth token", "API - Notes REST API Validation"</td>
+<td></td>
+<td>6</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling Validation"</td>
+<td></td>
+<td>0</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-E2E-02 - Note deleted via API disappears from the UI", "E2E - Hybrid UI and API Cross-Layer Validation"</td>
+<td></td>
+<td>35</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation"</td>
+<td></td>
+<td>1</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation"</td>
+<td><div><pre>java.lang.AssertionError: Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]
+	at com.capstone.stepdefs.ApiStepDefs.allTestedApiEndpointsShouldRespondWithin2Seconds(ApiStepDefs.java:465)
+	at ✽.all tested API endpoints should respond within 4 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/api/api_tests.feature:70)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace457759104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace457759104'><pre>java.lang.AssertionError: Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.capstone.stepdefs.ApiStepDefs.allTestedApiEndpointsShouldRespondWithin2Seconds(ApiStepDefs.java:465)
+	at ✽.all tested API endpoints should respond within 4 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/api/api_tests.feature:70)
+</pre></div></td>
+<td>5</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+<tr>
+<td title='com.capstone.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.capstone.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI", "E2E - Hybrid UI and API Cross-Layer Validation"</td>
+<td><div><pre>java.lang.AssertionError: API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]
+	at com.capstone.stepdefs.ApiStepDefs.theApiResponseTimeShouldBeWithin(ApiStepDefs.java:284)
+	at ✽.the API response time should be within 2 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/e2e/hybrid_e2e.feature:85)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace918206278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace918206278'><pre>java.lang.AssertionError: API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.capstone.stepdefs.ApiStepDefs.theApiResponseTimeShouldBeWithin(ApiStepDefs.java:284)
+	at ✽.the API response time should be within 2 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/e2e/hybrid_e2e.feature:85)
+</pre></div></td>
+<td>32</td>
+<td>com.capstone.runners.TestRunner@bdc8014</td></tr>
+</table><p>
+</body>
+</html>

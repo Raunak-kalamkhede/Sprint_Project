@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-skipped">Capstone Notes Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>C:\Users\RAUNAK\Downloads\Sprint 3 d\capstone_project\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Capstone_Notes_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">24 methods,  2 skipped,  22 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" class="hide-methods skipped suite-Capstone_Notes_Automation_Suite"> (hide)</a> <!-- hide-methods skipped suite-Capstone_Notes_Automation_Suite -->
+                      <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" class="show-methods skipped suite-Capstone_Notes_Automation_Suite"> (show)</a> <!-- show-methods skipped suite-Capstone_Notes_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Capstone_Notes_Automation_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-06 - All API endpoints respond within 4 seconds&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)">runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Capstone_Notes_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" class="hide-methods passed suite-Capstone_Notes_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-Capstone_Notes_Automation_Suite -->
+                      <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" class="show-methods passed suite-Capstone_Notes_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Capstone_Notes_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Capstone_Notes_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-05 - Delete a note via API and verify removal&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-05 - Delete a note via API and verify removal", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-04 - API login endpoints must reject bad payloads&quot;, &quot;Negative - Security and Error Handling ...)">runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-UI-03 - Create a note and verify it appears in the list&quot;, &quot;UI - Notes CRUD Operations&quot;)">runScenario("TS-UI-03 - Create a note and verify it appears in the list", "UI - Notes CRUD Operations")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-02b - Access rejected with an expired-format JWT token&quot;, &quot;Negative - Security and Error Hand...)">runScenario("TS-NEG-02b - Access rejected with an expired-format JWT token", "Negative - Security and Error Hand...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-01 - Access rejected when no auth token is provided&quot;, &quot;Negative - Security and Error Handlin...)">runScenario("TS-NEG-01 - Access rejected when no auth token is provided", "Negative - Security and Error Handlin...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-UI-02d - Login with various invalid credentials&quot;, &quot;UI - Login and Authentication&quot;)">runScenario("TS-UI-02d - Login with various invalid credentials", "UI - Login and Authentication")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)">runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-UI-01 - Successful login with valid credentials&quot;, &quot;UI - Login and Authentication&quot;)">runScenario("TS-UI-01 - Successful login with valid credentials", "UI - Login and Authentication")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-02 - Create note via API and verify it appears in GET notes&quot;, &quot;API - Notes REST API Validati...)">runScenario("TS-API-02 - Create note via API and verify it appears in GET notes", "API - Notes REST API Validati...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-UI-07 - Delete a note and verify it is removed from the list&quot;, &quot;UI - Notes CRUD Operations&quot;)">runScenario("TS-UI-07 - Delete a note and verify it is removed from the list", "UI - Notes CRUD Operations")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-03 - GET notes returns list for authenticated user&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-03 - GET notes returns list for authenticated user", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-E2E-01 - Note created via UI appears in the API response&quot;, &quot;E2E - Hybrid UI and API Cross-Layer ...)">runScenario("TS-E2E-01 - Note created via UI appears in the API response", "E2E - Hybrid UI and API Cross-Layer ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-02 - Access rejected with a gibberish auth token&quot;, &quot;Negative - Security and Error Handling V...)">runScenario("TS-NEG-02 - Access rejected with a gibberish auth token", "Negative - Security and Error Handling V...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-06 - All API endpoints respond within 4 seconds&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-01 - Login API returns valid JWT auth token&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-01 - Login API returns valid JWT auth token", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-NEG-04 - API login endpoints must reject bad payloads&quot;, &quot;Negative - Security and Error Handling ...)">runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-E2E-02 - Note deleted via API disappears from the UI&quot;, &quot;E2E - Hybrid UI and API Cross-Layer Vali...)">runScenario("TS-E2E-02 - Note deleted via API disappears from the UI", "E2E - Hybrid UI and API Cross-Layer Vali...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-03b - GET notes with different auth scenarios&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Capstone_Notes_Automation_Suite" title="com.capstone.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;TS-API-03b - GET notes with different auth scenarios&quot;, &quot;API - Notes REST API Validation&quot;)">runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Capstone_Notes_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Capstone_Notes_Automation_Suite" class="panel Capstone_Notes_Automation_Suite">
+          <div class="suite-Capstone_Notes_Automation_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.capstone.runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-06 - All API endpoints respond within 4 seconds&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-06 - All API endpoints respond within 4 seconds","API - Notes REST API Validation")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]
+	at com.capstone.stepdefs.ApiStepDefs.allTestedApiEndpointsShouldRespondWithin2Seconds(ApiStepDefs.java:465)
+	at ✽.all tested API endpoints should respond within 4 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/api/api_tests.feature:70)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)">
+                  </a> <!-- runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI","E2E - Hybrid UI and API Cross-Layer Validation")</span>
+                  <div class="stack-trace">java.lang.AssertionError: API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]
+	at com.capstone.stepdefs.ApiStepDefs.theApiResponseTimeShouldBeWithin(ApiStepDefs.java:284)
+	at ✽.the API response time should be within 2 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/e2e/hybrid_e2e.feature:85)
+... Removed 3 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Capstone_Notes_Automation_Suite-class-skipped -->
+          <div class="suite-Capstone_Notes_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.capstone.runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-05 - Delete a note via API and verify removal&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-05 - Delete a note via API and verify removal", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-05 - Delete a note via API and verify removal","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-04 - API login endpoints must reject bad payloads&quot;, &quot;Negative - Security and Error Handling ...)">
+                  </a> <!-- runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-04 - API login endpoints must reject bad payloads","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-UI-03 - Create a note and verify it appears in the list&quot;, &quot;UI - Notes CRUD Operations&quot;)">
+                  </a> <!-- runScenario("TS-UI-03 - Create a note and verify it appears in the list", "UI - Notes CRUD Operations") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-UI-03 - Create a note and verify it appears in the list","UI - Notes CRUD Operations")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-02b - Access rejected with an expired-format JWT token&quot;, &quot;Negative - Security and Error Hand...)">
+                  </a> <!-- runScenario("TS-NEG-02b - Access rejected with an expired-format JWT token", "Negative - Security and Error Hand...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-02b - Access rejected with an expired-format JWT token","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-01 - Access rejected when no auth token is provided&quot;, &quot;Negative - Security and Error Handlin...)">
+                  </a> <!-- runScenario("TS-NEG-01 - Access rejected when no auth token is provided", "Negative - Security and Error Handlin...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-01 - Access rejected when no auth token is provided","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-UI-02d - Login with various invalid credentials&quot;, &quot;UI - Login and Authentication&quot;)">
+                  </a> <!-- runScenario("TS-UI-02d - Login with various invalid credentials", "UI - Login and Authentication") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-UI-02d - Login with various invalid credentials","UI - Login and Authentication")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)">
+                  </a> <!-- runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI","E2E - Hybrid UI and API Cross-Layer Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">
+                  </a> <!-- runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-03 - UI login rejected for invalid credentials","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-UI-01 - Successful login with valid credentials&quot;, &quot;UI - Login and Authentication&quot;)">
+                  </a> <!-- runScenario("TS-UI-01 - Successful login with valid credentials", "UI - Login and Authentication") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-UI-01 - Successful login with valid credentials","UI - Login and Authentication")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-02 - Create note via API and verify it appears in GET notes&quot;, &quot;API - Notes REST API Validati...)">
+                  </a> <!-- runScenario("TS-API-02 - Create note via API and verify it appears in GET notes", "API - Notes REST API Validati...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-02 - Create note via API and verify it appears in GET notes","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">
+                  </a> <!-- runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-03 - UI login rejected for invalid credentials","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-UI-07 - Delete a note and verify it is removed from the list&quot;, &quot;UI - Notes CRUD Operations&quot;)">
+                  </a> <!-- runScenario("TS-UI-07 - Delete a note and verify it is removed from the list", "UI - Notes CRUD Operations") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-UI-07 - Delete a note and verify it is removed from the list","UI - Notes CRUD Operations")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-03 - GET notes returns list for authenticated user&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-03 - GET notes returns list for authenticated user", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-03 - GET notes returns list for authenticated user","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-03 - UI login rejected for invalid credentials&quot;, &quot;Negative - Security and Error Handling Val...)">
+                  </a> <!-- runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-03 - UI login rejected for invalid credentials","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-E2E-01 - Note created via UI appears in the API response&quot;, &quot;E2E - Hybrid UI and API Cross-Layer ...)">
+                  </a> <!-- runScenario("TS-E2E-01 - Note created via UI appears in the API response", "E2E - Hybrid UI and API Cross-Layer ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-E2E-01 - Note created via UI appears in the API response","E2E - Hybrid UI and API Cross-Layer Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-02 - Access rejected with a gibberish auth token&quot;, &quot;Negative - Security and Error Handling V...)">
+                  </a> <!-- runScenario("TS-NEG-02 - Access rejected with a gibberish auth token", "Negative - Security and Error Handling V...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-02 - Access rejected with a gibberish auth token","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-06 - All API endpoints respond within 4 seconds&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-06 - All API endpoints respond within 4 seconds","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-01 - Login API returns valid JWT auth token&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-01 - Login API returns valid JWT auth token", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-01 - Login API returns valid JWT auth token","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-NEG-04 - API login endpoints must reject bad payloads&quot;, &quot;Negative - Security and Error Handling ...)">
+                  </a> <!-- runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-NEG-04 - API login endpoints must reject bad payloads","Negative - Security and Error Handling Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-E2E-02 - Note deleted via API disappears from the UI&quot;, &quot;E2E - Hybrid UI and API Cross-Layer Vali...)">
+                  </a> <!-- runScenario("TS-E2E-02 - Note deleted via API disappears from the UI", "E2E - Hybrid UI and API Cross-Layer Vali...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-E2E-02 - Note deleted via API disappears from the UI","E2E - Hybrid UI and API Cross-Layer Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-03b - GET notes with different auth scenarios&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-03b - GET notes with different auth scenarios","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;TS-API-03b - GET notes with different auth scenarios&quot;, &quot;API - Notes REST API Validation&quot;)">
+                  </a> <!-- runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("TS-API-03b - GET notes with different auth scenarios","API - Notes REST API Validation")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Capstone_Notes_Automation_Suite-class-passed -->
+        </div> <!-- panel Capstone_Notes_Automation_Suite -->
+        <div panel-name="test-xml-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\RAUNAK\Downloads\Sprint 3 d\capstone_project\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Capstone Notes Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+    &lt;listener class-name=&quot;com.capstone.utils.AnnotationTransformer&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Chrome - All Scenarios&quot; verbose=&quot;0&quot; preserve-order=&quot;false&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.capstone.runners.TestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome - All Scenarios --&gt;
+&lt;/suite&gt; &lt;!-- Capstone Notes Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Capstone Notes Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Chrome - All Scenarios (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Capstone Notes Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Capstone Notes Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Capstone_Notes_Automation_Suite');
+function tableData_Capstone_Notes_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(24);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'com.capstone.runners.TestRunner')
+data.setCell(0, 3, 35339);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.capstone.runners.TestRunner')
+data.setCell(1, 3, 32931);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'com.capstone.runners.TestRunner')
+data.setCell(2, 3, 32448);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.capstone.runners.TestRunner')
+data.setCell(3, 3, 29868);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.capstone.runners.TestRunner')
+data.setCell(4, 3, 26431);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.capstone.runners.TestRunner')
+data.setCell(5, 3, 24873);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.capstone.runners.TestRunner')
+data.setCell(6, 3, 24359);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.capstone.runners.TestRunner')
+data.setCell(7, 3, 24055);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'com.capstone.runners.TestRunner')
+data.setCell(8, 3, 23589);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'com.capstone.runners.TestRunner')
+data.setCell(9, 3, 21266);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'com.capstone.runners.TestRunner')
+data.setCell(10, 3, 15498);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'com.capstone.runners.TestRunner')
+data.setCell(11, 3, 6767);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'com.capstone.runners.TestRunner')
+data.setCell(12, 3, 5148);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'com.capstone.runners.TestRunner')
+data.setCell(13, 3, 4989);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'com.capstone.runners.TestRunner')
+data.setCell(14, 3, 3906);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'com.capstone.runners.TestRunner')
+data.setCell(15, 3, 2958);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'com.capstone.runners.TestRunner')
+data.setCell(16, 3, 1908);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'com.capstone.runners.TestRunner')
+data.setCell(17, 3, 1730);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'com.capstone.runners.TestRunner')
+data.setCell(18, 3, 1678);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'com.capstone.runners.TestRunner')
+data.setCell(19, 3, 1430);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'com.capstone.runners.TestRunner')
+data.setCell(20, 3, 1383);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'com.capstone.runners.TestRunner')
+data.setCell(21, 3, 1137);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'com.capstone.runners.TestRunner')
+data.setCell(22, 3, 609);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'com.capstone.runners.TestRunner')
+data.setCell(23, 3, 604);
+window.suiteTableData['Capstone_Notes_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Capstone_Notes_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-Capstone_Notes_Automation_Suite">
+              </div> <!-- times-div-Capstone_Notes_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Capstone Notes Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Capstone_Notes_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.capstone.runners.TestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@3c6aa04a)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-01 - Login API returns valid JWT auth token", "API - Notes REST API Validation")</span>
+                <span class="method-start">1332 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-03 - GET notes returns list for authenticated user", "API - Notes REST API Validation")</span>
+                <span class="method-start">8112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-02 - Create note via API and verify it appears in GET notes", "API - Notes REST API Validati...)</span>
+                <span class="method-start">9252 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-05 - Delete a note via API and verify removal", "API - Notes REST API Validation")</span>
+                <span class="method-start">14242 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation")</span>
+                <span class="method-start">15975 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-06 - All API endpoints respond within 4 seconds", "API - Notes REST API Validation")</span>
+                <span class="method-start">21125 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation")</span>
+                <span class="method-start">25034 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-API-03b - GET notes with different auth scenarios", "API - Notes REST API Validation")</span>
+                <span class="method-start">26419 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-E2E-01 - Note created via UI appears in the API response", "E2E - Hybrid UI and API Cross-Layer ...)</span>
+                <span class="method-start">27851 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-E2E-02 - Note deleted via API disappears from the UI", "E2E - Hybrid UI and API Cross-Layer Vali...)</span>
+                <span class="method-start">49122 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)</span>
+                <span class="method-start">84463 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in...)</span>
+                <span class="method-start">117396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-01 - Access rejected when no auth token is provided", "Negative - Security and Error Handlin...)</span>
+                <span class="method-start">141452 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-02 - Access rejected with a gibberish auth token", "Negative - Security and Error Handling V...)</span>
+                <span class="method-start">143363 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-02b - Access rejected with an expired-format JWT token", "Negative - Security and Error Hand...)</span>
+                <span class="method-start">146323 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</span>
+                <span class="method-start">148002 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</span>
+                <span class="method-start">177871 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-03 - UI login rejected for invalid credentials", "Negative - Security and Error Handling Val...)</span>
+                <span class="method-start">202745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...)</span>
+                <span class="method-start">229178 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-NEG-04 - API login endpoints must reject bad payloads", "Negative - Security and Error Handling ...)</span>
+                <span class="method-start">229784 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-UI-01 - Successful login with valid credentials", "UI - Login and Authentication")</span>
+                <span class="method-start">230394 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-UI-02d - Login with various invalid credentials", "UI - Login and Authentication")</span>
+                <span class="method-start">245893 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-UI-03 - Create a note and verify it appears in the list", "UI - Notes CRUD Operations")</span>
+                <span class="method-start">270253 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("TS-UI-07 - Delete a note and verify it is removed from the list", "UI - Notes CRUD Operations")</span>
+                <span class="method-start">293843 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">326293 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

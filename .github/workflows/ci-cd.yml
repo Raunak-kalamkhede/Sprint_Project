@@ -1,0 +1,181 @@
+name: Capstone Notes Automation — CI/CD
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Cucumber tags to run (e.g. @smoke, @api, @e2e)'
+        required: false
+        default: '@smoke'
+      headless:
+        description: 'Run in headless mode'
+        required: false
+        default: 'true'
+
+env:
+  JAVA_VERSION: '11'
+  MAVEN_OPTS: '-Xmx2g -XX:+UseG1GC'
+
+jobs:
+
+  # =====================================================
+  # JOB 1: Build and Test
+  # =====================================================
+  test:
+    name: Run Automation Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+
+      # Step 1: Checkout repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Java 11
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+
+      # Step 3: Install Chrome browser
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
+
+      # Step 4: Generate TestData.xlsx (runs ExcelDataGenerator main())
+      - name: Generate Test Data Excel
+        run: |
+          mvn compile exec:java \
+            -Dexec.mainClass="com.capstone.utils.ExcelDataGenerator" \
+            -DskipTests
+
+      # Step 5: Compile and verify no syntax errors
+      - name: Compile Project
+        run: mvn clean compile -DskipTests -q
+
+      # Step 6: Run tests
+      - name: Run Cucumber Tests
+        run: |
+          TAGS="${{ github.event.inputs.tags || '@smoke' }}"
+          HEADLESS="${{ github.event.inputs.headless || 'true' }}"
+
+          mvn test \
+            -Dcucumber.filter.tags="${TAGS}" \
+            -Dheadless=${HEADLESS} \
+            -Dbrowser=chrome \
+            -q || true   # Don't fail the pipeline on test failures (reports show results)
+
+      # Step 7: Generate Allure report
+      - name: Generate Allure Report
+        if: always()
+        run: mvn allure:report -q
+
+      # Step 8: Upload Allure results (for allure-report action)
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-results
+          path: target/allure-results/
+          retention-days: 30
+
+      # Step 9: Upload Allure HTML report
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report
+          path: target/allure-report/
+          retention-days: 30
+
+      # Step 10: Upload Cucumber HTML report
+      - name: Upload Cucumber Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cucumber-report
+          path: target/cucumber-reports/
+          retention-days: 30
+
+      # Step 11: Upload screenshots on failure
+      - name: Upload Failure Screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: failure-screenshots
+          path: target/screenshots/
+          retention-days: 14
+
+      # Step 12: Upload log files
+      - name: Upload Test Logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-logs
+          path: target/logs/
+          retention-days: 14
+
+      # Step 13: Publish Allure Report to GitHub Pages (optional)
+      - name: Deploy Allure to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main' && always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/allure-report
+          destination_dir: allure-report
+
+  # =====================================================
+  # JOB 2: Full Regression (triggers on main branch only)
+  # =====================================================
+  full-regression:
+    name: Full Regression Suite
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Generate Test Data
+        run: |
+          mvn compile exec:java \
+            -Dexec.mainClass="com.capstone.utils.ExcelDataGenerator" \
+            -DskipTests -q
+
+      - name: Run Full Regression
+        run: |
+          mvn test \
+            -Dheadless=true \
+            -Dbrowser=chrome \
+            -q || true
+
+      - name: Upload Full Regression Allure Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-regression-allure-results
+          path: target/allure-results/
+          retention-days: 60

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="325.149" tests="24" skipped="0" failures="2" errors="0">
+<testcase classname="API - Notes REST API Validation" name="TS-API-01 - Login API returns valid JWT auth token" time="6.145">
+<system-out><![CDATA[
+When the user attempts API login with valid credentials.....................passed
+Then the API login response status should be 200............................passed
+And the API response should contain a valid auth token......................passed
+And the API response time should be within 4 seconds........................passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-03 - GET notes returns list for authenticated user" time="1.119">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I call GET /notes with the auth token..................................passed
+Then the GET /notes response should be 200..................................passed
+And the response should contain a list of notes.............................passed
+And the API response time should be within 4 seconds........................passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-02 - Create note via API and verify it appears in GET notes" time="4.973">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I create a note via API with category "Work", title "API Created Note", and description "Created directly via RestAssured API call".passed
+Then the API response status should be 200..................................passed
+And the API response time should be within 4 seconds........................passed
+When I call GET /notes with the auth token..................................passed
+Then the API response should contain the created note.......................passed
+When I delete the previously created API note...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-05 - Delete a note via API and verify removal" time="1.681">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I create a note via API with category "Personal", title "Note For Deletion Test", and description "This note will be deleted via API".passed
+Then the API response status should be 200..................................passed
+When I delete the previously created API note...............................passed
+And the API response time should be within 4 seconds........................passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-06 - All API endpoints respond within 4 seconds" time="5.126">
+<failure type="java.lang.AssertionError" message="Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: Performance failures: POST /users/login: 2189ms |  (threshold: 2000ms) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.capstone.stepdefs.ApiStepDefs.allTestedApiEndpointsShouldRespondWithin2Seconds(ApiStepDefs.java:465)
+	at ✽.all tested API endpoints should respond within 4 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/api/api_tests.feature:70)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+Then all tested API endpoints should respond within 4 seconds...............failed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-06 - All API endpoints respond within 4 seconds" time="3.894">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+Then all tested API endpoints should respond within 4 seconds...............passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-03b - GET notes with different auth scenarios - Example #1.1" time="1.372">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I call GET /notes with the auth token..................................passed
+Then the GET /notes response should be 200..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="API - Notes REST API Validation" name="TS-API-03b - GET notes with different auth scenarios - Example #1.2" time="1.417">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I call GET /notes with the auth token..................................passed
+Then the GET /notes response should be 200..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="E2E - Hybrid UI and API Cross-Layer Validation" name="TS-E2E-01 - Note created via UI appears in the API response" time="21.252">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+And the user is logged in to the notes dashboard............................passed
+When the user creates a note with category "Home", title "E2E Sync Test Note", and description "Created in browser - must appear in API".passed
+Then the created note should appear in the notes list.......................passed
+And the note created in UI should appear in the API response................passed
+And the API response time should be within 2 seconds........................passed
+And the note category and title should match between UI and API.............passed
+]]></system-out>
+</testcase>
+<testcase classname="E2E - Hybrid UI and API Cross-Layer Validation" name="TS-E2E-02 - Note deleted via API disappears from the UI" time="35.299">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+When I create a note via API with category "Work", title "E2E Reverse Sync Note", and description "Created via API - will be deleted via API".passed
+Then the API response status should be 200..................................passed
+And the user is logged in to the notes dashboard............................passed
+And the note with title "E2E Reverse Sync Note" should appear in the notes list.passed
+When I delete the note via API using the stored note ID.....................passed
+And the note deleted via API should not appear in the UI....................passed
+]]></system-out>
+</testcase>
+<testcase classname="E2E - Hybrid UI and API Cross-Layer Validation" name="TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI" time="32.917">
+<failure type="java.lang.AssertionError" message="API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: API response time 2488ms exceeds 2000ms threshold expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.capstone.stepdefs.ApiStepDefs.theApiResponseTimeShouldBeWithin(ApiStepDefs.java:284)
+	at ✽.the API response time should be within 2 seconds(file:///C:/Users/RAUNAK/Downloads/Sprint%203%20d/capstone_project/src/test/resources/features/e2e/hybrid_e2e.feature:85)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+And the user is logged in to the notes dashboard............................passed
+When the user creates a note with category "Personal", title "Full Lifecycle E2E Note", and description "Complete lifecycle: UI create, API verify, API delete, UI confirm".passed
+Then the created note should appear in the notes list.......................passed
+And the note created in UI should appear in the API response................passed
+And the note category and title should match between UI and API.............passed
+When I find the note ID in the API and store it.............................passed
+And I delete the note via API using the stored note ID......................passed
+Then the API response status should be 200..................................passed
+And the note deleted via API should not appear in the UI....................passed
+And the API response time should be within 2 seconds........................failed
+]]></system-out>
+</testcase>
+<testcase classname="E2E - Hybrid UI and API Cross-Layer Validation" name="TS-E2E-04 - Complete note lifecycle: create in UI, verify in API, delete via API, verify removal in UI" time="24.04">
+<system-out><![CDATA[
+Given I authenticate via API and store the token............................passed
+And the user is logged in to the notes dashboard............................passed
+When the user creates a note with category "Personal", title "Full Lifecycle E2E Note", and description "Complete lifecycle: UI create, API verify, API delete, UI confirm".passed
+Then the created note should appear in the notes list.......................passed
+And the note created in UI should appear in the API response................passed
+And the note category and title should match between UI and API.............passed
+When I find the note ID in the API and store it.............................passed
+And I delete the note via API using the stored note ID......................passed
+Then the API response status should be 200..................................passed
+And the note deleted via API should not appear in the UI....................passed
+And the API response time should be within 2 seconds........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-01 - Access rejected when no auth token is provided" time="1.898">
+<system-out><![CDATA[
+When I call GET /notes without an auth token................................passed
+Then the response should not be authorised..................................passed
+And the response should contain an error message............................passed
+And the API response time should be within 5 seconds........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-02 - Access rejected with a gibberish auth token" time="2.949">
+<system-out><![CDATA[
+When I call GET /notes with an invalid token "this-is-not-a-valid-token-xyz123".passed
+Then the response should not be authorised..................................passed
+And the response should contain an error message............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-02b - Access rejected with an expired-format JWT token" time="1.668">
+<system-out><![CDATA[
+When I call GET /notes with an invalid token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.INVALID.SIGNATURE".passed
+Then the response should not be authorised..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-03 - UI login rejected for invalid credentials - Example #1.1" time="29.86">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user logs in with email "nonexistent@capstone.com" and password "ValidPass123".passed
+Then the login error message should be displayed............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-03 - UI login rejected for invalid credentials - Example #1.2" time="24.865">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user logs in with email "raunak@gmail.com" and password "incorrectpass".passed
+Then the login error message should be displayed............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-03 - UI login rejected for invalid credentials - Example #1.3" time="26.421">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user logs in with email "hacker@evil.com" and password "password"..passed
+Then the login error message should be displayed............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-04 - API login endpoints must reject bad payloads - Example #1.1" time="0.596">
+<system-out><![CDATA[
+When the user attempts API login with email "wrong@example.com" and password "WrongPass123".passed
+Then the API login response status should be 401............................passed
+And the response should contain an error message............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Negative - Security and Error Handling Validation" name="TS-NEG-04 - API login endpoints must reject bad payloads - Example #1.2" time="0.602">
+<system-out><![CDATA[
+When the user attempts API login with email "raunak@gmail.com" and password "BadPassword".passed
+Then the API login response status should be 401............................passed
+And the response should contain an error message............................passed
+]]></system-out>
+</testcase>
+<testcase classname="UI - Login and Authentication" name="TS-UI-01 - Successful login with valid credentials" time="15.491">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user logs in with valid credentials................................passed
+Then the user should be redirected to the notes dashboard...................passed
+And the page load time should be acceptable.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="UI - Login and Authentication" name="TS-UI-02d - Login with various invalid credentials - Example #1.1" time="24.352">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user logs in with email "notregistered@test.com" and password "Password123".passed
+Then the login error message should be displayed............................passed
+]]></system-out>
+</testcase>
+<testcase classname="UI - Notes CRUD Operations" name="TS-UI-03 - Create a note and verify it appears in the list" time="23.58">
+<system-out><![CDATA[
+Given the user is logged in to the notes dashboard..........................passed
+When the user creates a note with category "Home", title "My First Test Note", and description "This note was created by Selenium automation".passed
+Then the note with title "My First Test Note" should appear in the notes list.passed
+And the dashboard page load time should be within limits....................passed
+]]></system-out>
+</testcase>
+<testcase classname="UI - Notes CRUD Operations" name="TS-UI-07 - Delete a note and verify it is removed from the list" time="32.441">
+<system-out><![CDATA[
+Given the user is logged in to the notes dashboard..........................passed
+When the user creates a note with category "Work", title "Note To Be Deleted", and description "This note will be deleted".passed
+And the note with title "Note To Be Deleted" should appear in the notes list.passed
+When the user deletes the note titled "Note To Be Deleted"..................passed
+Then the note with title "Note To Be Deleted" should NOT appear in the notes list.passed
+]]></system-out>
+</testcase>
+</testsuite>
